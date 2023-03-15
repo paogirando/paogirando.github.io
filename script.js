@@ -106,7 +106,7 @@ function updateTimer() {
 
   timer.innerHTML = "Você está aqui há " + timeString;
 
-  if (elapsedTime >= 3) {
+  if (elapsedTime >= 3600) {
     myVideo.pause();
     clearInterval(timerInterval1); // Para o timer
     parabensDialog.classList.add('show'); // Exibe o diálogo de parabéns
