@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pão Girando 🍞</title>
+    <style>
+      body {
+        background-color: #F8F8FF;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        height: 100vh;
+      }
+      
+      #video-container {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       max-width: 800px;
+       background-color: #FFFFFF;
+       border-radius: 10px;
+       padding: 20px;
+       box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.1);
+      }
+      
+      #video-container video {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 5px;
+      }
+      
+      #video-container h1 {
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 60px;
+        margin-top: 50px;
+        color: #4d4d4d;
+      }
+      
+      #video-container p {
+        font-size: 24px;
+        margin-top: 20px;
+        color: #6d6d6d;
+      }
+      
+      #timer {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 20px;
+        color: #4d4d4d;
+      }
+      
+      #discord-button {
+        background-color: #7289DA;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 32px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      }
+      #theme-toggle {
+        background-color: #3b88c3;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 32px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      }
+      
+      #discord-button:hover,
+      #theme-toggle:hover {
+        background-color: #4a9ad4;
+      }
+      
+      #creditos-regis {
+        font-size: 24px;
+        padding: 5px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: #6d6d6d;
+      }
+      
+      #pao-bom {
+        font-size: 24px;
+        padding: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #6d6d6d;
+      }
+      
+#parabens-dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  z-index: 9999;
+  text-align: center;
+}
+
+#parabens-dialog.show {
+  display: block;
+}
+
+#parabens-dialog p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#parabens-dialog button {
+  background-color: #3b88c3;
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#parabens-dialog button:hover {
+  background-color: #ca2e21;
+}
+
+
+/* Estilo para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-transform:;
+}
+
+/* Estilo para texto padrão */
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4d4d4d;
+}
+
+/* Estilo para links */
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+a:hover {
+  border-bottom: 2px solid #ff8800;
+}
+
+/* Estilo para botões */
+button, input[type="submit"] {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ff8800;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #1a1a1a;
+}
+
+</style>
+
+
+    </style>
+  </head>
+  <body>
+    <div id="video-container">
+      <h1>Pão Girando 🍞</h1>
+      <p>Caso o vídeo não toque, clique no ▶️ para começar o vídeo! 🍞</p>
+      <video id="my-video" src="https://cdn.discordapp.com/attachments/884917542362161172/1080968818685399100/lv_0_20230302181559.mp4" autoplay loop controls></video>      
+      <div id="timer"></div>
+      <div id="error-message" style="display: none;">
+  <p>Ocorreu um erro ao abrir o vídeo.</p>
+  <button onclick="location.reload()">Recarregar</button>
+</div>     
+      <div id="parabens-dialog">
+          
+          <p>Parabéns você zerou esse incrível site! :D</p>
+          
+          <p>Você ganhou 10 leveis no Arcane por perder 1 hora da sua vida nesse video (manda print para regisplayerr para resgatar o prêmio!)</p>
+          
+          <p>Aperte OK para atualizar a página e começar novamente!</p>
+          
+      <button id="btn-ok"
+      onclick="location.reload()">OK</button>
+      </div>
+      
+      <button id="theme-toggle">Alternar tema</button>
+      
+      <button id="discord-button" onclick="location.href='https://discord.gg/37SXFZanc8';">Server do Discord</button>
+      
+      <div id="pao-bom">Pão é bom! 🍞</div>
+      
+  <div id="creditos-regis">Criado por RegisPlayerr</div>
+  
+    </div>
+    <script>
+const myVideo = document.getElementById("my-video");
+const ErrorTimer = document.getElementById("timer");
+const parabensDialog = document.getElementById('parabens-dialog');
+
+myVideo.onerror = function() {
+  ErrorTimer.innerHTML = "Ocorreu um erro ao abrir o vídeo. <button onclick='location.reload()'>Recarregar</button>";
+  ErrorTimer.style.fontSize = "24px";
+  ErrorTimer.style.textAlign = "center";
+  ErrorTimer.style.marginTop = "20px";
+  myVideo.style.display = "none";
+};
+
+let timerInterval1 = null;
+let pauseTime = null;
+
+myVideo.addEventListener("play", function() {
+  if (!pauseTime) {
+    startTime = new Date().getTime();
+    timerInterval1 = setInterval(updateTimer, 10);
+  } else {
+    // Se o vídeo foi despausado, subtrai o tempo que ficou pausado do tempo total
+    const currentTime = new Date().getTime();
+    startTime += currentTime - pauseTime;
+    pauseTime = null;
+    timerInterval1 = setInterval(updateTimer, 10); // Inicia o timer novamente
+  }
+});
+
+myVideo.addEventListener("pause", function() {
+  clearInterval(timerInterval1);
+  pauseTime = new Date().getTime(); // Atualiza o tempo em que o vídeo foi pausado
+});
+
+function setLightTheme() {
+  document.body.style.backgroundColor = "#F8F8FF";
+  document.body.style.color = "black";
+  // outras propriedades CSS
+}
+
+function setDarkTheme() {
+  document.body.style.backgroundColor = "black";
+  document.body.style.color = "black";
+  // outras propriedades CSS
+
+  document.getElementById('parabens-dialog').style.color = "#222";
+  // outras propriedades CSS
+}
+
+
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", function() {
+  if (document.body.style.backgroundColor === "black") {
+    setLightTheme();
+    console.log("tema alterado para claro")
+  } else {
+    setDarkTheme();
+    console.log("tema alterado para escuro")
+  }
+});
+
+var startTime;
+var timerInterval;
+
+myVideo.addEventListener("play", function() {
+  if (!startTime) {
+    startTime = new Date().getTime();
+    timerInterval = setInterval(updateTimer, 1000);
+  }
+});
+
+function updateTimer() {
+  var currentTime = new Date().getTime();
+  var elapsedTime = Math.round((currentTime - startTime) / 1000);
+  var hours = Math.floor(elapsedTime / 3600);
+  var minutes = Math.floor((elapsedTime - (hours * 3600)) / 60);
+  var seconds = elapsedTime - (hours * 3600) - (minutes * 60);
+
+  var timeString = ""
+  if (hours > 0) {
+    timeString += hours + " hora" + (hours > 1 ? "s" : "") + ", ";
+  }
+
+  if (minutes > 0 || hours > 0) {
+    timeString += minutes + " minuto" + (minutes > 1 ? "s" : "") + " e ";
+  }
+
+
+  timeString += seconds + " segundo" + (seconds > 1 ? "s" : "");
+
+  timer.innerHTML = "Você está aqui há " + timeString;
+
+  if (elapsedTime >= 3600) {
+    myVideo.pause();
+    clearInterval(timerInterval1); // Para o timer
+    parabensDialog.classList.add('show'); // Exibe o diálogo de parabéns
+  }
+}
+
+
+    </script>
+</body>
+</html>
