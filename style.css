@@ -1,0 +1,267 @@
+      body {
+        background-color: #F8F8FF;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        height: 100vh;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      #video-container {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       max-width: 800px;
+       background-color: #FFFFFF;
+       border-radius: 10px;
+       padding: 20px;
+       box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.1);
+       transition: background-color 0.3s ease-in-out;
+      }
+      
+      #video-container video {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 5px;
+      }
+      
+      #video-container h1 {
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 60px;
+        margin-top: 50px;
+        color: #4d4d4d;
+      }
+      
+      #video-container p {
+        font-size: 24px;
+        margin-top: 20px;
+        color: #6d6d6d;
+      }
+      
+      #timer {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 20px;
+        color: #4d4d4d;
+      }
+      
+      #discord-button {
+        background-color: #7289DA;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 32px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      }
+      #theme-toggle {
+        background-color: #3b88c3;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 32px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      }
+      
+      #discord-button:hover,
+      #theme-toggle:hover {
+        background-color: #4a9ad4;
+      }
+      
+      #creditos-regis {
+        font-size: 24px;
+        padding: 5px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: #6d6d6d;
+      }
+      
+      #pao-bom {
+        font-size: 24px;
+        padding: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #6d6d6d;
+      }
+      
+#parabens-dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  z-index: 9999;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#parabens-dialog.show {
+  display: block;
+}
+
+#parabens-dialog p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#parabens-dialog button {
+  background-color: #3b88c3;
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#parabens-dialog button:hover {
+  background-color: #ca2e21;
+}
+
+
+/* Estilo para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-transform:;
+}
+
+/* Estilo para texto padrão */
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4d4d4d;
+}
+
+/* Estilo para links */
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+a:hover {
+  border-bottom: 2px solid #ff8800;
+}
+
+/* Estilo para botões */
+button, input[type="submit"] {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ff8800;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #1a1a1a;
+}
+
+.dark-mode {
+  background-color: #000000;
+}
+
+.dark-mode body {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode #video-container {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  box-shadow: 5px 5px 15px 0px rgba(255,255,255,0.1);
+}
+
+.dark-mode #video-container p {
+  color: #cccccc;
+}
+
+.dark-mode #video-container h1 {
+  color: #ffffff;
+}
+
+.dark-mode #timer {
+  color: #ffffff;
+}
+
+.dark-mode #discord-button,
+
+}
+
+.dark-mode #discord-button:hover,
+
+}
+
+.dark-mode a {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.dark-mode a:hover {
+  border-bottom-color: #ff8800;
+}
+
+.dark-mode button,
+.dark-mode input[type="submit"] {
+  color: #ffffff;
+  background-color: #ff8800;
+}
+
+.dark-mode button:hover,
+.dark-mode input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #ff8800;
+}
+
+.dark-mode #parabens-dialog {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode #parabens-dialog button {
+  background-color: #7289DA;
+}
+
+.dark-mode #parabens-dialog button:hover {
+  background-color: #ca2e21;
+}
+
+.light-mode {
+  background-color: #000000;
+}
+
+.light-mode #video-container {
+  background-color: #4d4d4d;
+}
+
+.light-mode h1,
+.light-mode p,
+.light-mode a {
+  color: #ffffff;
+}
+
