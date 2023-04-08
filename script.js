@@ -1,4 +1,5 @@
     // gera código aleatório
+    // background-color:rgb(200, 200, 200)
     const data = new Date();
     const dia = data.getDate();
     const hora = data.getHours().toString().padStart(2, '0');
@@ -104,12 +105,5 @@ function updateTimer() {
 
   timeString += seconds + " segundo" + (seconds > 1 ? "s" : "");
 
-  timer.innerHTML = "Você está aqui há " + timeString;
-
-  if (elapsedTime >= 3600) {
-    myVideo.pause();
-    clearInterval(timerInterval1); // Para o timer
-    parabensDialog.classList.add('show'); // Exibe o diálogo de parabéns
-  }
+  timer.innerHTML = "Você está aqui há " + timeString
 }
-
