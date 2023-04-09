@@ -1,97 +1,184 @@
-/* CSS para o vídeo */
-#video-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0 auto; /* centraliza o elemento na tela */
-}
-
 body {
-    overflow: hidden;
+    background-color: #F8F8FF;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#my-video {
-  margin-top: 0px;
-    height: 37vh;
+#video-container {
+   transition: background-color 0.3s ease-in-out;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
 }
 
-#video-controls {
-  margin-top: 10px;
+#video-container video {
+    width: 100%;
+    height: 50%;
 }
 
-
-/* CSS para o diálogo */
 #parabens-dialog {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 80%;
-  background-color: #fff;
-  border: 2px solid #000;
+  width: 80%;
+  max-width: 400px;
   padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  z-index: 9999;
   text-align: center;
-}
-#parabens-dialog p {
-  margin: 0 0 10px 0;
-}
-#parabens-dialog #btn-ok {
-  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-/* CSS para os botões */
-#theme-toggle,
-#discord-button {
-margin-top: 20px;
+#parabens-dialog.show {
   display: block;
-  margin: 10px auto;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  max-width: 100%;
-}
-#theme-toggle:hover,
-#discord-button:hover {
-  background-color: #eee;
 }
 
-/* CSS para outros elementos */
-h1,
-p,
-#timer,
-#error-message {
-  text-align: center;
+#timer {
+    text-align: center;
+    margin-top: 1vh;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+    background-color: #black;
 }
+
 #pao-bom {
   text-align: center;
   margin-top: 30px;
   font-size: 30px;
 }
+
 #creditos-regis {
   text-align: center;
   margin-top: 10px;
   font-size: 12px;
 }
 
-/* CSS responsivo */
-@media screen and (max-width: 768px) {
-  #parabens-dialog {
-    max-width: 90%;
-  }
-  #theme-toggle,
-  #discord-button {
-    font-size: 14px;
-    padding: 8px;
-  }
-  #pao-bom {
-    font-size: 24px;
-    margin-top: 20px;
-  }
-  #creditos-regis {
-    font-size: 10px;
-    margin-top: 5px;
-  }
+#theme-toggle {
+        background-color: #3b88c3;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 20px;
+        padding: 5px 10px;        
+        margin-top: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+#discord-button {
+        background-color: #7289DA;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 20px;
+        padding: 5px 10px;        
+        margin-top: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+#discord-button:hover {
+    background-color: #7289DA;
+}
+
+#theme-toggle:hover {
+        background-color: #4a9ad4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-transform:;
+}
+
+.dark-mode {
+  background-color: #3C3F46;
+}
+
+.dark-mode body {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+
+
+.dark-mode #video-container p {
+  color: #cccccc;
+}
+
+.dark-mode #video-container h1 {
+  color: #ffffff;
+}
+
+.dark-mode #timer {
+  color: #ffffff;
+}
+
+.dark-mode #discord-button,
+
+}
+
+.dark-mode #discord-button:hover,
+
+}
+
+.dark-mode a {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.dark-mode a:hover {
+  border-bottom-color: #ff8800;
+}
+
+.dark-mode button,
+.dark-mode input[type="submit"] {
+  color: #ffffff;
+  background-color: #ff8800;
+}
+
+.dark-mode button:hover,
+.dark-mode input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #ff8800;
+}
+
+.dark-mode #parabens-dialog {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode #parabens-dialog button {
+  background-color: #7289DA;
+}
+
+.dark-mode #parabens-dialog button:hover {
+  background-color: #ca2e21;
+}
+
+.light-mode {
+  background-color: #000000;
+}
+
+
+
+.light-mode h1,
+.light-mode p,
+.light-mode a {
+  color: #ffffff;
+}
+
+.dark-mode #pao-bom {
+  color: #ffffff;
+}
+
+.dark-mode #creditos-regis {
+  color: #ffffff;
 }
