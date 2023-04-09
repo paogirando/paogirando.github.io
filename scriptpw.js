@@ -44,6 +44,20 @@ myVideo.addEventListener("pause", function() {
   pauseTime = new Date().getTime(); // Atualiza o tempo em que o vídeo foi pausado
 });
 
+myVideo.addEventListener("waiting", function() {
+  clearInterval(timerInterval1);
+  pauseTime = new Date().getTime(); // Atualiza o tempo em que o vídeo foi pausado
+});
+
+myVideo.addEventListener("playing", function() {
+  if (pauseTime) {
+    const currentTime = new Date().getTime();
+    startTime += currentTime - pauseTime;
+    pauseTime = null;
+    timerInterval1 = setInterval(updateTimer, 10); // Inicia o timer novamente
+  }
+});
+
 const body = document.querySelector('body');
 
 function setLightTheme() {
@@ -85,6 +99,7 @@ myVideo.addEventListener("play", function() {
     timerInterval = setInterval(updateTimer, 1000);
   }
 });
+
 
 function updateTimer() {
   var currentTime = new Date().getTime();
