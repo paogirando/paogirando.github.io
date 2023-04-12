@@ -1,8 +1,6 @@
 # Pão girando 🍞
 
-Esse é um repositório para meu site chamado "Pão girando", nele
-seu objetivo é ficar 1 hora dentro do site para você 
-ganhar 10 níveis no meu servidor do Discord!
+Esse é um repositório para meu site chamado "Pão girando", onde é simplesmente um pão girando!
 
 https://paogirando.github.io
 
