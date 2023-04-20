@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pão Girando 🍞</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/paogirando/paogirando.github.io/ebcf76794754bd0b4224fb7fa764b66736bac21b/pgIco32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/paogirando/paogirando.github.io/ebcf76794754bd0b4224fb7fa764b66736bac21b/pgIco16x16.png">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/paogirando/paogirando.github.io/ebcf76794754bd0b4224fb7fa764b66736bac21b/pgIco.ico">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="video-container">
+      <h1>Pão Girando 🍞</h1>
+      <p>Caso o vídeo não toque, clique no ▶️ para começar o vídeo! 🍞</p>
+      <video id="my-video" src="https://cdn.discordapp.com/attachments/884917542362161172/1080968818685399100/lv_0_20230302181559.mp4" autoplay loop controls></video>
+      <div id="error-message" style="display: none;">
+        <p>Ocorreu um erro ao abrir o vídeo.</p>
+        <button onclick="location.reload()">Recarregar</button>
+      </div>
+      <div id="parabens-dialog">
+        <p>Parabéns você zerou esse incrível site! :D</p>
+        <p>Você ganhou 10 leveis no Arcane e 2x mais chances de ganhar os sorteios por perder 1 hora da sua vida nesse video (mande print para regisplayerr para resgatar o prêmio!)</p>
+        <p>Aperte OK para atualizar a página e começar novamente!</p>
+        <p>O seu código de resgate é: <span id="codigo"></span></p>      
+        <button id="btn-ok" onclick="location.reload()">OK</button>            
+      </div>
+      <div id="timer"></div>
+    <button id="theme-toggle">Alternar tema</button>
+  <button id="discord-button" onclick="location.href='https://discord.gg/2K6GpmGkKs';">Server do Discord</button>
+</div>
+  <div id="pao-bom">Pão é bom! 🍞</div>
+  <div id="creditos-regis">Criado por RegisPlayerr</div>
+    <script src="scriptpw.js"></script>
+  </body>
+</html>
