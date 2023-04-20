@@ -8,7 +8,8 @@
     <link rel="icon" type="image/x-icon" href="/icons/pgIco.ico">
     <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
   <body>
     <div id="video-container">
       <h1>Pão Girando 🍞</h1>
@@ -27,10 +28,10 @@
       </div>
       <div id="timer"></div>
     <button id="theme-toggle">Alternar tema</button>
-  <button id="discord-button" onclick="location.href='https://discord.gg/2K6GpmGkKs';">Server do Discord</button>
+  <button id="discord-button" onclick="showConfirmationDialog()">Server do Discord</button>
 </div>
   <div id="pao-bom">Pão é bom! 🍞</div>
   <div id="creditos-regis">Criado por RegisPlayerr</div>
-    <script src="/js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
