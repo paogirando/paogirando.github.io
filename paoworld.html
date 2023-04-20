@@ -3,11 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Pão Girando 🍞</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/pgIco32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/pgIco16x16.png">
-    <link rel="icon" type="image/x-icon" href="/icons/pgIco.ico">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </head>
   <body>
     <div id="video-container">
@@ -27,10 +25,10 @@
       </div>
       <div id="timer"></div>
     <button id="theme-toggle">Alternar tema</button>
-  <button id="discord-button" onclick="location.href='https://discord.gg/2K6GpmGkKs';">Server do Discord</button>
+  <button id="discord-button" onclick="showConfirmationDialog()">Server do Discord</button>
 </div>
   <div id="pao-bom">Pão é bom! 🍞</div>
   <div id="creditos-regis">Criado por RegisPlayerr</div>
-    <script src="js/scriptpw.js"></script>
+    <script src="/js/scriptpw.js"></script>
   </body>
 </html>
