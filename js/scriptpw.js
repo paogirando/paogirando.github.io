@@ -11,6 +11,24 @@
     const codigoElemento = document.getElementById('codigo');
     codigoElemento.innerText = codigo;
     
+        function showConfirmationDialog() {
+      Swal.fire({
+        title: 'Você quer sair desse site?',
+        text: 'Você será redirecionado para fora desse site, e irá perder todo o tempo acumulado.',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, ir para o server do Discord!',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = 'https://discord.gg/2K6GpmGkKs';
+        }
+      });
+    }
+
+
 const myVideo = document.getElementById("my-video");
 const ErrorTimer = document.getElementById("timer");
 const parabensDialog = document.getElementById('parabens-dialog');
@@ -122,9 +140,22 @@ function updateTimer() {
 
   timer.innerHTML = "Você está aqui há " + timeString;
 
-  if (elapsedTime >= 3600) {
+  if (elapsedTime >= 1800) {
     myVideo.pause();
     clearInterval(timerInterval1); // Para o timer
-    parabensDialog.classList.add('show'); // Exibe o diálogo de parabéns
+showSuccessDialog() // Exibe o diálogo de parabéns
   }
 }
+
+    function showSuccessDialog() {
+      Swal.fire({
+        title: 'Parabéns você zerou esse incrível site! :D',
+        text: "Você ganhou 10 leveis no Arcane por perder 30 minutos da sua vida nesse video (mande print para regisplayerr para resgatar o prêmio!). O seu código de resgate é: " + codigo,
+        icon: 'success'
+        
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.reload()
+      }
+      });
+    }
