@@ -7,6 +7,23 @@
     const numeroAleatorio = Math.floor(Math.random() * 100);
     const codigo = `${hora}${minuto}${dia}${numeroAleatorio}`;
 
+    function showConfirmationDialog() {
+      Swal.fire({
+        title: 'Você quer sair desse site?',
+        text: 'Você será redirecionado para fora desse site, e irá perder todo o tempo acumulado.',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, ir para o server do Discord!',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = 'https://discord.gg/2K6GpmGkKs';
+        }
+      });
+    }
+
     // atualiza o elemento HTML com o código
     const codigoElemento = document.getElementById('codigo');
     codigoElemento.innerText = codigo;
