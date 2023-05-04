@@ -1,268 +1,282 @@
 body {
-        background-color: #F8F8FF;
-            transition: background-color 0.3s ease-in-out;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                }
+    background-color: #F8F8FF;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-                .custom-loader {
-                  position: fixed;
-                    top: 50%;
-                      left: 50%;
-                        transform: translate(-50%, -50%);
-                          width: 50px;
-                            height: 50px;
-                              border-radius: 50%;
-                                background: 
-                                    radial-gradient(farthest-side,#F4A802 94%,#0000) top/8px 8px no-repeat,
-                                        conic-gradient(#0000 30%,#F4A802);
-                                          -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
-                                            animation:s3 1s infinite linear;
-                                            }
+.custom-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#F4A802 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#F4A802);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:s3 1s infinite linear;
+}
 
-                                            @keyframes s3{ 
-                                              0% {transform: translate(-50%, -50%) rotate(0deg)}
-                                                100%{transform: translate(-50%, -50%) rotate(360deg)}
-                                                }
+@keyframes s3{ 
+  0% {transform: translate(-50%, -50%) rotate(0deg)}
+  100%{transform: translate(-50%, -50%) rotate(360deg)}
+}
 
-                                                #start-btn {
-                                                    border: none;
-                                                        background: #F8F8FF;
-                                                            border-radius: 50px;
-                                                                    font-size: 20px;
-                                                                            padding: 5px 10px;        
-                                                                                    margin-top: 10px;
-                                                                                        
-                                                                                        }
+#start-btn {
+    border: none;
+    background: #F8F8FF;
+    border-radius: 50px;
+        font-size: 20px;
+        padding: 5px 10px;        
+        margin-top: 10px;
+    
+}
 
-                                                                                        #loading {
-                                                                                            text-align: center;
-                                                                                                position: fixed;
-                                                                                                    top: 50%;        
-                                                                                                        left: 50%;    
-                                                                                                            transform: translate(-50%, -50%);
-                                                                                                                width: 80%;
-                                                                                                                    
-                                                                                                                    }
+#loading {
+    text-align: center;
+    position: fixed;
+    top: 50%;        
+    left: 50%;    
+    transform: translate(-50%, -50%);
+    width: 80%;
+    
+}
 
-                                                                                                                    #loading h1 {
-                                                                                                                        top: 10%;
-                                                                                                                        }
+#loading h1 {
+    top: 10%;
+}
 
-                                                                                                                        #start {
-                                                                                                                            display: none;
-                                                                                                                                text-align: center;
-                                                                                                                                    position: fixed;
-                                                                                                                                        top: 50%;
-                                                                                                                                            left: 50%;
-                                                                                                                                                transform: translate(-50%, -50%);
-                                                                                                                                                    width: 80%;
-                                                                                                                                                    }
+#start {
+    display: none;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
 
-                                                                                                                                                    #video-container {
-                                                                                                                                                       display: none;
-                                                                                                                                                          transition: background-color 0.3s ease-in-out;
-                                                                                                                                                             align-items: center;
-                                                                                                                                                                justify-content: center;
-                                                                                                                                                                   text-align: center;
-                                                                                                                                                                      width: 100%;
-                                                                                                                                                                         max-width: 100%;
-                                                                                                                                                                            height: auto;
-                                                                                                                                                                            }
+#video-container {
+   display: none;
+   transition: background-color 0.3s ease-in-out;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+}
 
-                                                                                                                                                                            #video-container video {
-                                                                                                                                                                                width: 100%;
-                                                                                                                                                                                    max-width: 100%;
-                                                                                                                                                                                        height: auto;
-                                                                                                                                                                                        }
+#video-container video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
 
-                                                                                                                                                                                        @media (min-width: 768px) {
-                                                                                                                                                                                          #video-container video {
-                                                                                                                                                                                              width: 40%;
-                                                                                                                                                                                                  height: auto;
-                                                                                                                                                                                                    }
-                                                                                                                                                                                                      
-                                                                                                                                                                                                        #video-container h1 {
-                                                                                                                                                                                                            font-size: 3em;
-                                                                                                                                                                                                              }
-                                                                                                                                                                                                                
-                                                                                                                                                                                                                  #video-container p {
-                                                                                                                                                                                                                      font-size: 1.5em;
-                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                          
-                                                                                                                                                                                                                            #timer {
-                                                                                                                                                                                                                                  font-size: 1.5em;
-                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                    }
+@media (min-width: 768px) {
+  #video-container video {
+    width: 40%;
+    height: auto;
+  }
+  
+  #video-container h1 {
+    font-size: 3em;
+  }
+  
+  #video-container p {
+    font-size: 1.5em;
+  }
+  
+  #timer {
+      font-size: 1.5em;
+  }
+}
 
+#title {
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+   text-align: center;
+   height: auto;
+   font-size: 1em;
+    
+}
 
-                                                                                                                                                                                                                                    #parabens-dialog {
-                                                                                                                                                                                                                                      display: none;
-                                                                                                                                                                                                                                        position: fixed;
-                                                                                                                                                                                                                                          top: 50%;
-                                                                                                                                                                                                                                            left: 50%;
-                                                                                                                                                                                                                                              transform: translate(-50%, -50%);
-                                                                                                                                                                                                                                                width: 80%;
-                                                                                                                                                                                                                                                  max-width: 400px;
-                                                                                                                                                                                                                                                    padding: 20px;
-                                                                                                                                                                                                                                                      background-color: white;
-                                                                                                                                                                                                                                                        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-                                                                                                                                                                                                                                                          z-index: 9999;
-                                                                                                                                                                                                                                                            text-align: center;
-                                                                                                                                                                                                                                                              transition: background-color 0.3s ease-in-out;
-                                                                                                                                                                                                                                                              }
+#parabens-dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  z-index: 9999;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
 
-                                                                                                                                                                                                                                                              #parabens-dialog.show {
-                                                                                                                                                                                                                                                                display: block;
-                                                                                                                                                                                                                                                                }
+#parabens-dialog.show {
+  display: block;
+}
 
-                                                                                                                                                                                                                                                                #timer {
-                                                                                                                                                                                                                                                                    text-align: center;
-                                                                                                                                                                                                                                                                        margin-top: 1vh;
-                                                                                                                                                                                                                                                                            align-items: center;
-                                                                                                                                                                                                                                                                                justify-content: center;
-                                                                                                                                                                                                                                                                                    transition: background-color 0.3s ease-in-out;
-                                                                                                                                                                                                                                                                                        background-color: #black;
-                                                                                                                                                                                                                                                                                            font-size: 3vh;
-                                                                                                                                                                                                                                                                                            }
+#timer {
+    text-align: center;
+    margin-top: 1vh;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+    background-color: #black;
+    font-size: 3vh;
+}
 
-                                                                                                                                                                                                                                                                                            /* Parte final (créditos) */
+/* Parte final (créditos) */
 
-                                                                                                                                                                                                                                                                                            #pao-bom {
-                                                                                                                                                                                                                                                                                              display: none;
-                                                                                                                                                                                                                                                                                                text-align: center;
-                                                                                                                                                                                                                                                                                                  margin-top: 2vh;
-                                                                                                                                                                                                                                                                                                    font-size: 4.8vh;
-                                                                                                                                                                                                                                                                                                    }
+#pao-bom {
+  display: none;
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 4.8vh;
+}
 
-                                                                                                                                                                                                                                                                                                    #creditos {
-                                                                                                                                                                                                                                                                                                      display: none;
-                                                                                                                                                                                                                                                                                                        text-align: center;
-                                                                                                                                                                                                                                                                                                          margin-top: 1vh;
-                                                                                                                                                                                                                                                                                                            font-size: 1.8vh;
-                                                                                                                                                                                                                                                                                                            }
+#creditos {
+  display: none;
+  text-align: center;
+  margin-top: 1vh;
+  font-size: 1.8vh;
+}
 
-                                                                                                                                                                                                                                                                                                            /* Botões */
+/* Botões */
 
-                                                                                                                                                                                                                                                                                                            #theme-toggle {
-                                                                                                                                                                                                                                                                                                                    background-color: #3b88c3;
-                                                                                                                                                                                                                                                                                                                            color: white;
-                                                                                                                                                                                                                                                                                                                                    border: none;
-                                                                                                                                                                                                                                                                                                                                            border-radius: 50px;
-                                                                                                                                                                                                                                                                                                                                                    font-size: 20px;
-                                                                                                                                                                                                                                                                                                                                                            padding: 5px 10px;        
-                                                                                                                                                                                                                                                                                                                                                                    margin-top: 10px;
-                                                                                                                                                                                                                                                                                                                                                                            cursor: pointer;
-                                                                                                                                                                                                                                                                                                                                                                                    transition: background-color 0.2s ease-in-out;
-                                                                                                                                                                                                                                                                                                                                                                                            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-                                                                                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                                                                                            #discord-button {
-                                                                                                                                                                                                                                                                                                                                                                                                background-color: #7289da;
-                                                                                                                                                                                                                                                                                                                                                                                                    color: white;
-                                                                                                                                                                                                                                                                                                                                                                                                        border: none;
-                                                                                                                                                                                                                                                                                                                                                                                                            border-radius: 50px;
-                                                                                                                                                                                                                                                                                                                                                                                                                font-size: 20px;
-                                                                                                                                                                                                                                                                                                                                                                                                                    padding: 5px 10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                        margin-top: 10px;
-                                                                                                                                                                                                                                                                                                                                                                                                                            cursor: pointer;
-                                                                                                                                                                                                                                                                                                                                                                                                                                transition: background-color 0.2s ease-in-out;
-                                                                                                                                                                                                                                                                                                                                                                                                                                    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-                                                                                                                                                                                                                                                                                                                                                                                                                                    }
-
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                    #discord-button:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                        background-color: #7289DA;
-                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                        #theme-toggle:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                background-color: #4a9ad4;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                /* Textos */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                h1, h2, h3, h4, h5, h6 {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                  font-family: 'Montserrat', sans-serif;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    font-weight: 700;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      color: #1a1a1a;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        letter-spacing: 1px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          text-transform:;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          /* Tema escuro */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          .dark-mode {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            background-color: #3C3F46;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            .dark-mode body {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              background-color: #2c2c2c;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                .dark-mode #video-container p {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  color: #cccccc;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  .dark-mode #video-container h1 {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .dark-mode #timer {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      .dark-mode a {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                          border-bottom-color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                          .dark-mode a:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            border-bottom-color: #ff8800;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .dark-mode button,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .dark-mode input[type="submit"] {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                background-color: #ff8800;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .dark-mode button:hover,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .dark-mode input[type="submit"]:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  background-color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: #ff8800;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .dark-mode #parabens-dialog {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      background-color: #1a1a1a;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        .dark-mode #parabens-dialog button {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          background-color: #7289DA;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          .dark-mode #parabens-dialog button:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            background-color: #ca2e21;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .dark-mode #pao-bom {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              .dark-mode #creditos-regis {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* Tema claro */
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .light-mode {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  background-color: #000000;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+#theme-toggle {
+        background-color: #3b88c3;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 20px;
+        padding: 5px 10px;        
+        margin-top: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+#discord-button {
+    background-color: #7289da;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
 
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  .light-mode h1,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  .light-mode p,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  .light-mode a {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    color: #ffffff;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+#discord-button:hover {
+    background-color: #7289DA;
+}
+
+#theme-toggle:hover {
+        background-color: #4a9ad4;
+}
+
+/* Textos */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-transform:;
+}
+
+/* Tema escuro */
+
+.dark-mode {
+  background-color: #3C3F46;
+}
+
+.dark-mode #title h1 {
+    color: #ffffff;
+}
+
+.dark-mode body {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode #video-container p {
+  color: #cccccc;
+}
+
+.dark-mode #video-container h1 {
+  color: #ffffff;
+}
+
+.dark-mode #timer {
+  color: #ffffff;
+}
+
+.dark-mode a {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.dark-mode a:hover {
+  border-bottom-color: #ff8800;
+}
+
+.dark-mode button,
+.dark-mode input[type="submit"] {
+  color: #ffffff;
+  background-color: #ff8800;
+}
+
+.dark-mode button:hover,
+.dark-mode input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #ff8800;
+}
+
+.dark-mode #parabens-dialog {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode #parabens-dialog button {
+  background-color: #7289DA;
+}
+
+.dark-mode #parabens-dialog button:hover {
+  background-color: #ca2e21;
+}
+
+.dark-mode #pao-bom {
+  color: #ffffff;
+}
+
+.dark-mode #creditos {
+  color: #ffffff;
+}
+
+/* Tema claro */
+
+.light-mode {
+  background-color: #000000;
+}
+
+
+.light-mode h1,
+.light-mode p,
+.light-mode a {
+  color: #ffffff;
 }
