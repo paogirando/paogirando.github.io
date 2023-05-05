@@ -1,6 +1,6 @@
     // gera código aleatório
         // background-color:rgb(200, 200, 200)
-        console.log('Pão World')
+        
             const data = new Date();
                 const dia = data.getDate();
                     const hora = data.getHours().toString().padStart(2, '0');
