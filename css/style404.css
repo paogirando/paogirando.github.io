@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    background-color: #F8F8FF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 7vh;
+    
+}
+
+p {
+    text-align: center;
+    font-size: 3vh;
+}
+
+img {
+    width: 40vh;
+    height: 40vh;
+}
+
+button {
+        background-color: #3b88c3;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 3vh;
+        padding: 5px 10px;        
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
