@@ -36,7 +36,6 @@ const myVideo = document.getElementById("my-video");
 
 const ErrorTimer = document.getElementById("timer");
 
-const parabensDialog = document.getElementById('parabens-dialog');
 
 myVideo.onerror = function() {
 
